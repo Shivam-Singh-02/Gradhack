@@ -28,7 +28,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 
 
-class MainActivity : AppCompatActivity() {
+class Login : AppCompatActivity() {
     private var credentialsProvider: AWSCredentialsProvider? = null
     private var awsConfiguration: AWSConfiguration? = null
     private var biometricPrompt: BiometricPrompt? = null
@@ -79,6 +79,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         selectFingerPrintButton.setOnClickListener{
+            fingerprintHandler.setNextActivity(NextActivity())
             biometricPrompt = BiometricPrompt( this, fingerprintHandler.executor,  fingerprintHandler.callback )
 
             findViewById<View>(R.id.selectFingerPrintButton).setOnClickListener { view ->

@@ -16,6 +16,7 @@ import androidx.core.content.ContextCompat.startActivity
 
 
 open class FingerprintHandler(Activity:Context){
+    var activity: Activity? = null
     var biometricPrompt: BiometricPrompt? = null
     val executor = MainThreadExecutor()
     fun buildBiometricPrompt(): BiometricPrompt.PromptInfo {
@@ -25,6 +26,9 @@ open class FingerprintHandler(Activity:Context){
             .setDescription("Touch your finger on the finger print sensor to authorise your account.")
             .setNegativeButtonText("Cancel")
             .build()
+    }
+    fun setNextActivity(nextActivity: Activity){
+        this.activity = nextActivity
     }
     var promptInfo = buildBiometricPrompt()
     var callback = object: BiometricPrompt.AuthenticationCallback(){
@@ -47,7 +51,7 @@ open class FingerprintHandler(Activity:Context){
         }
 
         fun onAuthSuccess() {
-            Activity.startActivity(Intent(Activity, NextActivity::class.java))
+            Activity.startActivity(Intent(Activity, activity!!::class.java))
             (Activity as AppCompatActivity).finish()
 
         }
