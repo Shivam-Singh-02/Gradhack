@@ -41,4 +41,7 @@ dependencies {
     implementation 'androidx.biometric:biometric:1.0.0-alpha04'
     implementation('com.amazonaws:aws-android-sdk-mobile-client:2.7.+@aar') { transitive = true }
     implementation('com.amazonaws:aws-android-sdk-lex:2.7.+@aar') { transitive = true; }
+    implementation 'com.amazonaws:aws-android-sdk-polly:2.7.0'
+    implementation 'com.amazonaws:aws-android-sdk-rekognition:2.7.0'
+    implementation 'com.amazonaws:aws-android-sdk-translate:2.6.20'
 }
