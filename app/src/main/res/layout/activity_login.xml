@@ -30,13 +30,13 @@
 
     <EditText
         android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="59dp"
+        android:layout_width="348dp"
+        android:layout_height="57dp"
+        android:layout_marginLeft="33dp"
         android:layout_marginTop="20dp"
-        android:inputType="textPassword"
-        android:layout_marginLeft="35dp"
         android:layout_marginRight="30dp"
-        android:hint="Password"/>
+        android:hint="Password"
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/loginbutton"

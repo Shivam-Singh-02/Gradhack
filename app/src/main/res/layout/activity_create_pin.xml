@@ -4,15 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:textAlignment="center"
     tools:context=".CreatePin">
 
 
     <EditText
         android:id="@+id/editText_pin"
-        android:layout_width="170dp"
-        android:layout_height="34dp"
+        android:layout_width="133dp"
+        android:layout_height="57dp"
         android:ems="10"
         android:inputType="numberPassword"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
